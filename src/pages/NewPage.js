@@ -1,10 +1,18 @@
 import React, { Component } from "react";
-import firebase from 'firebase';
 import ReactLoading from 'react-loading';
 import { Redirect } from 'react-router-dom';
+import CreateMenu from '../components/createMenu';
 import '../css/App.css';
 
 class HomePage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        };
+
+    }
+
     render() {
         console.log(this.props.userObject);
         if (this.props.userObject === false) {
@@ -15,7 +23,7 @@ class HomePage extends Component {
         }
         return(
             <div>
-                creating new menu now !!!
+                <CreateMenu userObject={this.props.userObject}/>
             </div>
         );
     }

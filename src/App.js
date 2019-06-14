@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import NewPage from './pages/NewPage';
 import FourOhFour from "./pages/FourOhFour";
@@ -38,7 +37,6 @@ class App extends Component {
             <Router>
                 <Switch>
                         <Route exact path="/" render={(props) => <HomePage {...props} userObject={this.state.userObject} />} />
-                        <Route path="/login" render={(props) => <LoginPage {...props} userObject={this.state.userObject} />} />
                         <Route path="/new" render={(props) => <NewPage {...props} userObject={this.state.userObject} />} />
                         <Route component={FourOhFour} />
                 </Switch>
