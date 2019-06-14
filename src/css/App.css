@@ -1,0 +1,310 @@
+.App {
+  text-align: center;
+  background-color: #333842;
+  height: 100%;
+}
+
+.App-header {
+  background-color: #333842;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-title {
+  float: left;
+  color: white;
+  cursor: pointer;
+  margin-top: 0;
+  padding: 1em;
+  position: fixed;
+}
+
+.App-settings {
+  float: right;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.thread-page-container {
+  background-color: #333842;
+  color: white;
+}
+
+.App-topbar {
+  width: 100%;
+  height: 100px;
+  background-color: #282c34;
+  position: fixed;
+  z-index: 100;
+}
+
+.App-bottombar {
+  width: 100%;
+  height: 40px;
+  background-color: #282c34;
+  position: fixed;
+  bottom: 0;
+}
+
+.account-name {
+  margin: 1.5em;
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1.15em;
+  text-decoration: none;
+  color: white;
+}
+
+.sign-in {
+  color: #28a745;
+  background-color: transparent;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 2em;
+  margin-top: 1.4em;
+}
+
+.sign-in:hover {
+  color: #208537;
+  text-decoration: none;
+}
+
+.App-title:hover {
+  color: grey;
+}
+
+.button-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+  background-color: #339cf7;
+  border-radius: 7px;
+  padding: .5em;
+  font-size: 20px;
+  margin: .5em;
+  cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: #277dc6;
+}
+
+.error {
+  height: 20px;
+  font-size: 20px;
+}
+
+input {
+  border-radius: 7px;
+  margin: .25em;
+  padding: .25em;
+  font-size: 15px;
+}
+
+.new-thread {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 2em;
+  margin-top: 1.4em;
+}
+
+.sign-out {
+  background-color: transparent;
+  color: #d9534f;  
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 2em;
+  margin-top: 1.4em;
+}
+
+.sign-out:hover {
+  color: #ad423f; 
+}
+
+.new-thread:hover, .settings:hover{
+  color: grey;
+}
+
+.delete-thread {
+  color: #ffc107;
+  background-color: transparent;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 2em;
+  margin-top: 1.4em;
+}
+
+.delete-thread:hover {
+  color: #b38706; 
+}
+
+.settings {
+  background-color: transparent;
+  color: white;  
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 2em;
+  margin-top: 1.4em;
+}
+
+.third-party {
+  cursor: pointer;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+input[type='checkbox'] {
+  width:20px;
+  height:20px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+
+.content-input {
+  border-radius: 7px;
+  font-size: 18px;
+  margin: .5em;
+  padding: .5em;
+  background-color: #3d4148;
+  color: white;
+}
+
+.thread-object {
+  background-color: #3e4451;
+  text-align: left;
+  border-radius: 5px;
+  padding: .5em;
+  margin: .5em;
+  height: 100px;
+  border-style: solid;
+  border-color: #3e4451;
+  border-width: 1px;
+}
+
+
+.thread-holder {
+  width: 50%;
+  align-content: flex-start;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.thread-author {
+  font-size: 20px;
+}
+
+.thread-text {
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  text-decoration: none;
+}
+
+.thread-text:hover {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.thread-text:hover .thread-title {
+  color: white;
+  cursor: pointer;
+}
+
+.thread-object:hover {
+  /* background-color: #282c34; */
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+.thread-upvote-container {
+  display: inline-block;
+  height: 90px;
+  text-align: center;
+  vertical-align: super;
+  width: 35px;
+  margin-right: 1em;
+}
+
+.upvote {
+  font-size: 15px;
+  color: red;
+  cursor: pointer;
+}
+
+.downvote {
+  font-size: 15px;
+  color: blue;
+  cursor: pointer;
+
+}
+
+.thread-page-container {
+  height: 100%;
+  position: relative;
+  z-index: auto;
+  top: 0;
+  text-align: left;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 150px;
+}
+
+.thread-page-title {
+  font-size: 1.75em;
+
+}
+
+.thread-page-author {
+  font-size: .6em;
+  color: rgb(177, 177, 177);
+}
+
+.thread-page-content {
+  font-size: .7em;
+  margin-bottom: 50px;
+}
+
+
+.submit-form {
+  margin-bottom: 3em;
+}
+
+.thread-page-comment {
+  background-color: #3e4451;
+  padding: .75em;
+  border-radius: 5px;
+  margin: .4em;
+  text-align: left;
+  width: 600px;
+}
+
+.thread-page-comment-content {
+  font-size: .7em; 
+  margin-bottom: .4em;
+  word-wrap: break-word;
+}
+
+.thread-page-comment-container {
+  margin-bottom: 2em;
+}
+
+#message-id {
+  font-size: 1.65em !important;
+}
