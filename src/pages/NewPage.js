@@ -14,7 +14,6 @@ class HomePage extends Component {
     }
 
     render() {
-        console.log(this.props.userObject);
         if (this.props.userObject === false) {
             return (<ReactLoading type={"spin"} color={"black"} height={150} width={150} />);
         }
