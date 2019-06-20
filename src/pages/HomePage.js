@@ -9,26 +9,12 @@ class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: null,
-            recieved: false,
         };
     }
-    
-    componentDidUpdate() {
-        if (!this.state.recieved) {
-            firebase.firestore().collection('users').doc(this.props.userObject.uid).get()
-            .then(doc => {
-                if (doc.exists) {
-                    this.setState({ data: doc.data(), recieved: true });
-                }
-            });
-        }
-    }
-
 
     render() {
-
-        if (this.props.userObject === false || this.state.recieved === false) {
+        
+        if (this.props.userObject === false || this.props.data === undefined) {
             return (
                 <div>
                     <h1>ServeBoard</h1>
@@ -36,7 +22,7 @@ class HomePage extends Component {
                 </div>
             );
         }
-        
+
         return(
             <div>
                 <h1>ServeBoard</h1>
@@ -49,13 +35,13 @@ class HomePage extends Component {
                                 New
                             </div>
                         </Link>
-                        {this.state.data.menu.map(menu => {
-                            return(
-                                <div>
-                                    {menu.food}
-                                </div>
-                            );
-                        })}
+                       {this.props.data.menu.map((menu, key) => {
+                           return(
+                               <div key={key}>
+                                   {menu.food}
+                               </div>
+                           );
+                       })}
                     </div>
                     : 
                     <SignIn />

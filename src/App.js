@@ -29,6 +29,13 @@ class App extends Component {
         // When the user logs in, set userObject to them
         firebase.auth().onAuthStateChanged((user) => {
             this.setState({ userObject: user });
+
+            firebase.firestore().collection('users').doc(user.uid).get()
+            .then(doc => {
+                if (doc.exists) {
+                    this.setState({ data: doc.data() });
+                }
+            });
         });
     }
 
@@ -36,7 +43,7 @@ class App extends Component {
         return(
             <Router>
                 <Switch>
-                        <Route exact path="/" render={(props) => <HomePage {...props} userObject={this.state.userObject} />} />
+                        <Route exact path="/" render={(props) => <HomePage {...props} userObject={this.state.userObject} data={this.state.data} />} />
                         <Route path="/new" render={(props) => <NewPage {...props} userObject={this.state.userObject} />} />
                         <Route component={FourOhFour} />
                 </Switch>
